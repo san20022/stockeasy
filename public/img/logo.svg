@@ -1,0 +1,7 @@
+<svg width="220" height="60" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="60" height="60" rx="16" fill="#0F766E"/>
+  <path d="M18 20L30 13L42 20V40L30 47L18 40V20Z" fill="white" opacity="0.95"/>
+  <path d="M22 22L30 27L38 22" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M30 27V42" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+  <text x="74" y="37" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#111827">StockEasy</text>
+</svg>

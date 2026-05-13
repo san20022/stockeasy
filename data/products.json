@@ -1,0 +1,22 @@
+[
+  {
+    "id": "sample-1",
+    "name": "Notebook Pack",
+    "category": "Office Supplies",
+    "quantity": 24,
+    "price": 3.99,
+    "description": "Pack of notebooks for office or school use.",
+    "createdAt": "2026-05-01T12:00:00.000Z",
+    "updatedAt": "2026-05-01T12:00:00.000Z"
+  },
+  {
+    "id": "sample-2",
+    "name": "Thermal Receipt Paper",
+    "category": "Store Supplies",
+    "quantity": 4,
+    "price": 12.5,
+    "description": "Low stock item used for register receipts.",
+    "createdAt": "2026-05-01T12:00:00.000Z",
+    "updatedAt": "2026-05-01T12:00:00.000Z"
+  }
+]

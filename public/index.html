@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StockEasy is a simple inventory management system for small businesses." />
+  <title>StockEasy | Inventory Management</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="StockEasy home">
+        <img src="img/logo.svg" alt="StockEasy logo" />
+      </a>
+      <div class="nav-links">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#inventory">Inventory</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <p class="eyebrow">Simple inventory control for local businesses</p>
+        <h1>Organize products, reduce waste, and make better inventory decisions.</h1>
+        <p class="hero-text">StockEasy helps small businesses track products, quantities, prices, and categories in one clean and easy-to-use system.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#inventory">Manage Inventory</a>
+          <a class="btn secondary" href="#about">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Inventory summary preview">
+        <span class="card-label">Inventory Health</span>
+        <strong id="heroValue">$0.00</strong>
+        <p>Total inventory value currently tracked in StockEasy.</p>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="dashboard" id="dashboard">
+      <div class="section-heading">
+        <p class="eyebrow">Dashboard</p>
+        <h2>Inventory overview</h2>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><span>Total Products</span><strong id="totalProducts">0</strong></article>
+        <article class="stat-card"><span>Total Units</span><strong id="totalUnits">0</strong></article>
+        <article class="stat-card"><span>Total Value</span><strong id="totalValue">$0.00</strong></article>
+        <article class="stat-card warning"><span>Low Stock</span><strong id="lowStock">0</strong></article>
+      </div>
+    </section>
+
+    <section class="inventory" id="inventory">
+      <div class="section-heading">
+        <p class="eyebrow">Inventory</p>
+        <h2>Product management</h2>
+        <p>Add, edit, delete, search, and filter products using a simple JSON-based system.</p>
+      </div>
+
+      <div class="app-layout">
+        <form class="product-form" id="productForm">
+          <h3 id="formTitle">Add New Product</h3>
+          <input type="hidden" id="productId" />
+          <label>Product Name<input id="name" type="text" placeholder="Example: Receipt Paper" required /></label>
+          <label>Category<input id="category" type="text" placeholder="Example: Store Supplies" required /></label>
+          <div class="form-row">
+            <label>Quantity<input id="quantity" type="number" min="0" placeholder="10" required /></label>
+            <label>Price<input id="price" type="number" min="0" step="0.01" placeholder="9.99" required /></label>
+          </div>
+          <label>Description<textarea id="description" rows="4" placeholder="Optional product notes"></textarea></label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Save Product</button>
+            <button class="btn secondary" type="button" id="cancelEdit">Cancel</button>
+          </div>
+          <p class="message" id="formMessage" role="status"></p>
+        </form>
+
+        <div class="product-panel">
+          <div class="filters">
+            <input id="search" type="search" placeholder="Search products..." />
+            <select id="categoryFilter"><option value="All">All Categories</option></select>
+            <select id="statusFilter">
+              <option value="all">All Stock</option>
+              <option value="low">Low Stock</option>
+            </select>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead><tr><th>Product</th><th>Category</th><th>Qty</th><th>Price</th><th>Actions</th></tr></thead>
+              <tbody id="productTable"></tbody>
+            </table>
+            <p class="empty-state" id="emptyState">No products found. Add your first product to begin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">Purpose</p>
+        <h2>Built for small business organization</h2>
+        <p>StockEasy was created as a senior project to support small businesses that need a practical and friendly way to reduce operational expenses through better inventory organization.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>© 2026 StockEasy. Senior Project by Luis Sanchez Rojas.</p></footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
