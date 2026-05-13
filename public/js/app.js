@@ -51,7 +51,7 @@ async function loadStats() {
   document.querySelector('#lowStock').textContent = stats.lowStock;
 }
 
-function renderProducts(products) 
+function renderProducts(products) {
   emptyState.style.display = products.length ? 'none' : 'block';
   productTable.innerHTML = products.map((product) => `
     <tr>
